@@ -84,6 +84,7 @@ public class LinkedList<T> implements List<T> {
     		//update most frequent
     		if (currentFrequency > mostFrequency) {
     			mostFrequent = currentFrequent;
+    			mostFrequency = currentFrequency;
     		}
 
     		//update current frequent

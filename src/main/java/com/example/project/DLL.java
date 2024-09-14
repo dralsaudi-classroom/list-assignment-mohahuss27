@@ -92,8 +92,10 @@ public class DLL<T> {
 				E2 = current;
 			current = current.next;
 		}
-		if (E1 == null || E2 == null)
+		if (E1 == null || E2 == null) {
+			current = head;
 			return;
+		}
 		
 		// remove between E1 and E2
 		E1.next = E2;
