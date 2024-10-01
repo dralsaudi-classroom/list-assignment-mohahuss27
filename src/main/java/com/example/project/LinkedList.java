@@ -65,7 +65,7 @@ public class LinkedList<T> implements List<T> {
 	}
 
 	public T mostFrequentElement() {
-		Node<T> mostFrequent = head, currentFrequent = head;
+		/*Node<T> mostFrequent = head, currentFrequent = head;
     	int mostFrequency = 1, currentFrequency;
     	
     	while (currentFrequent != null) {
@@ -90,6 +90,25 @@ public class LinkedList<T> implements List<T> {
     		//update current frequent
     		currentFrequent = currentFrequent.next;
     	}
-    	return mostFrequent.data;
+    	return mostFrequent.data;*/
+		T mfe = null;
+		int max = 0;
+		Node<T> p = head;
+		while (p != null) {
+			Node<T> q = p;
+			int count = 0;
+			while (q != null) {
+				if (q.data == p.data)
+					count++;
+				q = q.next;
+			}
+			if (count > max) {
+				mfe = p.data;
+				max = count;
+			}
+			p = p.next;
+		}
+		return mfe;
+			
     }
 }

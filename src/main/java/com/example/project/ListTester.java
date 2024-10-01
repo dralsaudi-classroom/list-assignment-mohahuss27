@@ -2,10 +2,7 @@ package com.example.project;
 
 public class ListTester {
 	public static <T> void circularLeftShift(List<T> list, int n) {
-
-		if (list.empty())
-			return;
-
+		
 		for (int i = 0; i < n; i++) {
 			list.findFirst();
 			T tmp = list.retrieve();
